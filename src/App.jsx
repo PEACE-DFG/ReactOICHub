@@ -1,16 +1,16 @@
-import './App.css'
+
+import React from 'react'
+import Home from './Pages/Home'
+import Foot from './Pages/Foot'
 
 function App() {
-
-  // Javascript code
   return (
-    <>
-   <h1>First REACT JS </h1>
-   {
-    console.log(2+3 )
-   }
-    </>
+    <div>
+      <Home/>
+      <Foot/>
+    </div>
   )
 }
 
 export default App
+

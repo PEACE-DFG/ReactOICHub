@@ -1,0 +1,9 @@
+.top{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+}
+.text{
+    font-weight: 900;
+    color: red;
+}
