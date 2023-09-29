@@ -2,7 +2,7 @@ import React from 'react'
 import './index.css'
 // import gate from './style.module.css'
 
-function Index() {
+function Index(detail) {
     // Javascript
     // const styles={
     //     backgroundColor:'blue',
@@ -30,7 +30,7 @@ function Index() {
                APPLICATION OF MODULES FOR STYLING 
             </h1> 
         </div>*/}
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        {/* <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://cdn.pixabay.com/photo/2023/07/05/11/14/alpaca-8108043_1280.png" class="d-block w-100" alt="..."/>
@@ -50,7 +50,16 @@ function Index() {
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+</div> */}
+        <h1>
+          Name:{detail.name}
+        </h1>
+        <h1>
+          Age:{detail.age}
+        </h1>
+        <h1>
+          Job:{detail.job}
+        </h1>
     </div>
   )
 }
