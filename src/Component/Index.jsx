@@ -51,7 +51,7 @@ function Index(detail) {
     <span class="visually-hidden">Next</span>
   </button>
 </div> */}
-        <h1>
+        {/* <h1>
           Name:{detail.name}
         </h1>
         <h1>
@@ -59,7 +59,9 @@ function Index(detail) {
         </h1>
         <h1>
           Job:{detail.job}
-        </h1>
+        </h1> */}
+
+        
     </div>
   )
 }

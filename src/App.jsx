@@ -1,13 +1,15 @@
 
 import React from 'react'
 import Home from './Pages/Home'
-import Foot from './Pages/Foot'
+import Count from './Pages/Count'
+// import Foot from './Pages/Foot'
 
 function App() {
   return (
     <div>
       <Home/>
-      <Foot/>
+      <Count/>
+      {/* <Foot/> */}
     </div>
   )
 }
