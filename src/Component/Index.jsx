@@ -1,8 +1,7 @@
-import React from 'react'
 import './index.css'
 // import gate from './style.module.css'
 
-function Index(detail) {
+function Index() {
     // Javascript
     // const styles={
     //     backgroundColor:'blue',
@@ -60,6 +59,7 @@ function Index(detail) {
         <h1>
           Job:{detail.job}
         </h1> */}
+        <h1>HOMEPAGE</h1>
 
         
     </div>
