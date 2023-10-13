@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate=useNavigate()
+  function logOut(){
+    localStorage.clear();
+    navigate('/register')
+
+  }
   return (
     <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,7 +23,13 @@ function Navbar() {
             <Link to='/'>Home</Link>
           </a>
         </li>
-        <li className="nav-item">
+     {
+      localStorage.getItem('users')?
+      <>
+      <li onClick={logOut}>Logout</li>
+      </>:
+      <>
+         <li className="nav-item">
           <a className="nav-link" href="#">
             <Link to='/register'>Register</Link>
           </a>
@@ -26,6 +39,8 @@ function Navbar() {
             <Link to='/login'>Login</Link>
           </a>
         </li>
+      </>
+     }
       </ul>
       <form className="d-flex">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>

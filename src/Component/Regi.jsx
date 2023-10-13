@@ -1,6 +1,7 @@
 import { useState } from "react"
+import {useNavigate} from 'react-router-dom'
 function Regi() {
- 
+ const navigate=useNavigate()
   const [user,setUser]=useState({
     Name:'',
     Email:'',
@@ -32,6 +33,7 @@ function Regi() {
     const users=JSON.parse(localStorage.getItem('users'))||[];
     users.push(user);
     localStorage.setItem('users', JSON.stringify(users))
+    navigate('/login')
   }
 
 
