@@ -1,18 +1,39 @@
 import Index from '../Component/Index'
-
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 function Home() {
-  const user ={
-    name:'Mr Jonathan',
-    age:'35 years',
-    job:'Web developer',
-    class:'REACT JS'
-  }
+  const [products,setProducts]=useState([]);
+  function fetchProducts(){
+    axios.get('https://dummyjson.com/products')
+    .then(res=>{
+      console.log(res.data.products)
+        setProducts(res.data.products)
+      })
+  }useEffect(()=>{
+    fetchProducts()
+  },[]);
+
   return (
     <div>
-      {/* <Index name={user.name} age={user.age}/> */}
-      {/* should in case the datas are much use spread operator */}
-      <Index {...user}/>
+      <div className="container">
+        <div>
+          {
+            (products.length>0)?
+            products.map((value,index)=>{
+              return(
+                <div key={index}>
+                   <Index {...value}/>
+
+                  </div>
+              )
+            }):
+            <>
+            <h1>Products is Loading...</h1>
+            </>
+          }
+        </div>
+      </div>
     </div>
   )
 }
